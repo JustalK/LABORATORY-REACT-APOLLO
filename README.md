@@ -18,6 +18,8 @@ I explain with all the details how I build the project and my way of working.
 ## Experiences
 
 - **Experience 1**: Creating a simple useQuery
+- **Experience 2**: Repeating a simple query every 0.5s (pollInterval)
+- **Experience 3**: Refetching data with new variables
 
 ## Documentation
 #### Code documentation
