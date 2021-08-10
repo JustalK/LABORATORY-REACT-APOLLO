@@ -22,6 +22,8 @@ I explain with all the details how I build the project and my way of working.
 - **Experience 3**: Refetching data with new variables
 - **Experience 4**: Playing with the NetworkStatus instead of loading and error
 - **Experience 5**: Playing with the iseLazyQuery for calling query on a button
+- **Experience 6**: Testing the fetchPolicy network-only
+- **Experience 7**: Testing the fetchPolicy cache-first
 
 ## Documentation
 #### Code documentation
