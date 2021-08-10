@@ -21,6 +21,7 @@ I explain with all the details how I build the project and my way of working.
 - **Experience 2**: Repeating a simple query every 0.5s (pollInterval)
 - **Experience 3**: Refetching data with new variables
 - **Experience 4**: Playing with the NetworkStatus instead of loading and error
+- **Experience 5**: Playing with the iseLazyQuery for calling query on a button
 
 ## Documentation
 #### Code documentation
