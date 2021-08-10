@@ -21,11 +21,14 @@ const POST = gql`
 
 /**
  * @function Experience
- * Just call the api qith a variable id 1
+ * Check the network tab in google, it query the data every 0.5s without rerendering the page
  * @return {Object} Return the dom of the Experience page
  */
 const Experience = () => {
-  const { loading, error, data } = useQuery(POST, { variables: { id: 1 } })
+  const { loading, error, data } = useQuery(POST, {
+    variables: { id: 1 },
+    pollInterval: 500
+  })
   if (loading) return <p>Loading...</p>
   if (error) return <p>Error :(</p>
   const { post } = data
