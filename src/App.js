@@ -1,20 +1,36 @@
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import { ROUTE_HOME, ROUTE_SECONDARY } from '@constants/routes'
-import Home from '@pages/Home'
-import Secondary from '@pages/Secondary'
+import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom'
+import Experiences from '@pages'
 
 export default function App() {
   return (
     <Router>
-      <Switch>
-        <Route path={ROUTE_SECONDARY}>
-          <Secondary />
-        </Route>
-        <Route path={ROUTE_HOME}>
-          <Home />
-        </Route>
-      </Switch>
+      <div className="navigation">
+        <nav>
+          <ul>
+            {Object.keys(Experiences).map((e, index) => (
+              <li key={index}>
+                <Link to={`/${index + 1}`}>{e}</Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+      <div className="content">
+        <Switch>
+          {Object.keys(Experiences).map((e, index) => {
+            const Type = Experiences[e]
+            return (
+              <Route key={index} path={`/${index + 1}`}>
+                <Type />
+              </Route>
+            )
+          })}
+          <Route path="/">
+            <span>Click on one of the experience on the left side</span>
+          </Route>
+        </Switch>
+      </div>
     </Router>
   )
 }

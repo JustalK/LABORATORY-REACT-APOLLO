@@ -7,6 +7,12 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import '@styles/index.scss'
 import App from '@src/App'
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'
+
+const client = new ApolloClient({
+  uri: 'https://graphqlzero.almansi.me/api',
+  cache: new InMemoryCache()
+})
 
 /**
  * @function render
@@ -14,7 +20,9 @@ import App from '@src/App'
  */
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ApolloProvider client={client}>
+      <App />
+    </ApolloProvider>
   </React.StrictMode>,
   document.getElementById('root')
 )
