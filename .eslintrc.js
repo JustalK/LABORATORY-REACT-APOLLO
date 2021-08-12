@@ -47,6 +47,7 @@ module.exports = {
       }
     ],
     'react/prop-types': 0,
-    'arrow-body-style': 0
+    'arrow-body-style': 0,
+    'no-console': 0
   }
 }
