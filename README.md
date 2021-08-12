@@ -24,6 +24,7 @@ I explain with all the details how I build the project and my way of working.
 - **Experience 5**: Playing with the iseLazyQuery for calling query on a button
 - **Experience 6**: Testing the fetchPolicy network-only
 - **Experience 7**: Testing the fetchPolicy cache-first
+- **Experience 8**: Refetching a query after a mutation
 
 ## Documentation
 #### Code documentation
